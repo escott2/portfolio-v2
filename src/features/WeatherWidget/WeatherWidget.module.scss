@@ -1,9 +1,0 @@
-@use "../../styles/abstracts/" as *;
-
-.weatherWidgetContainer {
-  grid-area: weather;
-}
-
-.noDataMessage {
-  @include widget-no-data-message;
-}

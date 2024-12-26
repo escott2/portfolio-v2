@@ -48,11 +48,11 @@
 
 .underline {
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   left: 0;
   right: 0;
-  height: 2px;
-  background: black;
+  height: 4px;
+  background: $light-cyan;
 }
 
 .profileImg {
@@ -69,15 +69,13 @@
   display: none;
 
   @media screen and (min-width: $media-breakpoint-medium) {
-    display: block;
-    border: 2px solid $black;
-    line-height: 27px;
-    background-color: transparent;
-    @include nav-link;
-    padding: $primary-button-padding;
-    margin: 10px 0 10px 25px;
-    transition: all 0.25s linear;
-    border-radius: 10px;
+    @include primary-button;
+
+    & {
+      display: block;
+      background-color: $pale-blue;
+      transition: all 0.25s linear;
+    }
 
     &.emphasizeButton {
       background-color: $light-cyan;

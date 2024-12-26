@@ -51,21 +51,15 @@
 }
 
 .handWaveOutline {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
 }
 
 .sectionTitle {
   @include main-section-title;
 
   & {
-    color: $black;
     padding: 20px;
-    top: 0;
-  }
-
-  @media screen and (min-width: $media-breakpoint-medium) {
-    font-size: 40px;
   }
 }
 
@@ -140,12 +134,12 @@
 }
 
 .scrollToTopButton {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: $light-cyan;
 
   svg {
-    height: 30px;
+    height: 25px;
     width: auto;
   }
 }

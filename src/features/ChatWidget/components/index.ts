@@ -1,1 +1,0 @@
-export { UserResponseRadioButton } from "./UserResponseRadioButton";

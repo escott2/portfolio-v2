@@ -67,7 +67,7 @@
 
   &:hover {
     cursor: pointer;
-    border-bottom: 2px solid $black;
+    border-bottom: 4px solid $light-cyan;
   }
 }
 
@@ -81,8 +81,6 @@
   color: $main-section-title-color;
   text-align: center;
   padding-bottom: 20px;
-  position: relative;
-  top: -30px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     font-size: $main-section-title-font-size;

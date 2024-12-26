@@ -74,8 +74,6 @@ function Home({ hasScrolledDown }: HomeProps) {
     setIsTitleHovered(false);
   };
 
-  console.log(isTitleHovered);
-
   return (
     <>
       <main className={styles.homeContainer}>
@@ -109,7 +107,6 @@ function Home({ hasScrolledDown }: HomeProps) {
                 animate="animate"
               />
             </div>
-            <div className={styles.testDivTop}></div>
             <div className={styles.titleContainerBottom}></div>
           </div>
 
@@ -117,7 +114,7 @@ function Home({ hasScrolledDown }: HomeProps) {
             <div className={styles.introContent}>
               <div className={styles.introText}>
                 <p>
-                  I build well-engineered, responsive, and user-friendly
+                  I build responsive, user-friendly, and thoughtfully-engineered
                   websites. Explore{" "}
                   <Link
                     to="projects"
@@ -162,9 +159,11 @@ function Home({ hasScrolledDown }: HomeProps) {
             </div>
           </div>
         </Element>
-        <Projects />
-        <About />
-        <Contact />
+        <div>
+          <Projects />
+          <About />
+          <Contact />
+        </div>
 
         <AnimatePresence>
           {hasScrolledDown && (
