@@ -10,6 +10,7 @@
 
 @mixin main-section-container {
   @include layout-container(60px 30px);
+  margin-bottom: 50px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     padding: 30px;
@@ -17,7 +18,6 @@
 }
 
 @mixin main-section-content {
-  // background-color: $light-grey;
   background-color: $white;
   border-radius: 10px 10px 0 0;
   box-shadow: $common-box-shadow;

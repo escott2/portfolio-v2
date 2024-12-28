@@ -1,0 +1,54 @@
+@use "../../../../styles/abstracts/" as *;
+
+.projectContainer {
+  padding: 40px;
+}
+
+.projectTitle {
+  @include heading-3;
+  text-align: center;
+  margin: 20px;
+}
+
+.linkContainer {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.linkText {
+  display: block;
+  text-align: center;
+}
+
+.projectPreview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  background-color: $light-grey;
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    flex-direction: row;
+  }
+}
+
+.projectInfo {
+  padding: 20px;
+  max-width: 700px;
+  flex: 1;
+  font-size: 18px;
+}
+
+.projectStack {
+  padding-top: 20px;
+  li {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: $light-cyan;
+    display: inline-block;
+    margin: 0 5px 5px 0;
+  }
+}

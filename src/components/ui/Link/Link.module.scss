@@ -1,0 +1,16 @@
+@use "../../../styles/abstracts/" as *;
+
+.link {
+  font-weight: 700;
+  cursor: pointer;
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:visted {
+    color: $black;
+  }
+}
