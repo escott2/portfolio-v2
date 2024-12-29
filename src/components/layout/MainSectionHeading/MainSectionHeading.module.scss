@@ -7,7 +7,6 @@
 .sectionTitle {
   @include main-section-title;
   & {
-    background-color: $light-cyan;
     padding-top: 20px;
   }
 }

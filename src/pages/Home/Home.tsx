@@ -180,7 +180,7 @@ function Home({ hasScrolledDown }: HomeProps) {
                 onClick={handleScrollToTop}
                 customClasses={styles.scrollToTopButton}
               >
-                <svg viewBox="0 0 20 20" fill="#223945">
+                <svg viewBox="0 0 20 20" fill="#FFFFFF">
                   <path d="M9.00014 3.828L2.92914 9.899L1.51514 8.485L10.0001 0L10.7071 0.707L18.4851 8.485L17.0711 9.899L11.0001 3.828V20H9.00014V3.828Z" />
                 </svg>
               </IconButton>

@@ -30,16 +30,18 @@ function Project() {
             conversation with me in the 'Water Cooler Chat' widget.
           </p>
           <div>
-            {/* <h4>Built With</h4> */}
             <ul className={styles.projectStack}>
               <li>React</li>
               <li>TypeScript</li>
+              <li>CSS Modules</li>
+              <li>Sass</li>
               <li>REST API Integration</li>
               <li>React Context API</li>
               <li>Form Validation</li>
               <li>Mobile First Design</li>
               <li>Responsive UI</li>
               <li>CSS Grid</li>
+              <li>CSS Flexbox</li>
             </ul>
           </div>
         </div>

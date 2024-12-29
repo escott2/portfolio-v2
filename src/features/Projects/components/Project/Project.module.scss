@@ -1,13 +1,17 @@
 @use "../../../../styles/abstracts/" as *;
 
 .projectContainer {
-  padding: 40px;
+  padding: 0 40px 40px;
 }
 
 .projectTitle {
   @include heading-3;
   text-align: center;
   margin: 20px;
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    text-align: left;
+  }
 }
 
 .linkContainer {
@@ -28,7 +32,9 @@
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  background-color: $light-grey;
+  background-color: $white;
+  border: 1px solid $light-cyan;
+  border-radius: 10px;
 
   @media screen and (min-width: $media-breakpoint-large) {
     flex-direction: row;
@@ -36,10 +42,13 @@
 }
 
 .projectInfo {
-  padding: 20px;
-  max-width: 700px;
+  padding: 0 40px 40px;
   flex: 1;
   font-size: 18px;
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    padding: 40px;
+  }
 }
 
 .projectStack {

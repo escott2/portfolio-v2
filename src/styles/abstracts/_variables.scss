@@ -36,13 +36,13 @@ $input-height: 40px;
 
 $primary-button-font-size: 18px;
 $primary-button-padding: 5px 25px;
-$primary-button-color: $text-color;
-$primary-button-border: 1px solid #223945;
+$primary-button-color: $white;
+$primary-button-border: 1px solid $primary-color;
+$primary-button-border-radius: 0;
 $primary-button-cursor: pointer;
-$primary-button-background-color: $secondary-color;
+$primary-button-background-color: $primary-color;
 $primary-button-hover-background-color: $white;
 $primary-button-hover-color: $black;
-$primary-button-hover-border-color: $primary-color;
 
 $main-section-title-font-size-mobile: 28px;
 $main-section-title-font-size: 30px;
