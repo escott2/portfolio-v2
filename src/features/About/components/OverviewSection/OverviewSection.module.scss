@@ -1,0 +1,33 @@
+@use "../../../../styles/abstracts/" as *;
+
+.overviewSection {
+  padding: 0 20px 20px 20px;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.overviewImg {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  flex: 1;
+  border-radius: 10px;
+}
+
+.overviewText {
+  max-width: 650px;
+  font-size: 18px;
+  padding: 40px 0;
+  flex: 1;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 40px 0 40px 40px;
+  }
+}

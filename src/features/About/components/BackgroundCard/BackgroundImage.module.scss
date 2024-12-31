@@ -1,0 +1,13 @@
+@use "../../../../styles/abstracts/" as *;
+
+.backgroundLogo {
+  height: 40px;
+  width: auto;
+  margin: 20px;
+  margin-left: 0;
+
+  @media screen and (min-width: $media-breakpoint-small) {
+    margin-left: 20px;
+    min-width: 70px;
+  }
+}

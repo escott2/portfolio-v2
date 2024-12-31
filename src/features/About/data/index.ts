@@ -1,1 +1,1 @@
-export { languageSkillData } from "./skillsData";
+export { languageSkillData, technologiesSkillData } from "./skillsData";

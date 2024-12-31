@@ -1,0 +1,19 @@
+@use "../../../styles/abstracts/" as *;
+
+.aboutSubsection {
+  padding: 10px;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 0 30px 30px 30px;
+  }
+}
+
+.backgroundContainer {
+  display: flex;
+  flex-wrap: wrap;
+
+  h3 {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
+}
