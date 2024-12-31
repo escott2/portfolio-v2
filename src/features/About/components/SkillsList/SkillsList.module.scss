@@ -1,0 +1,26 @@
+@use "../../../../styles/abstracts/" as *;
+
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c8e1ea;
+    padding: 10px 15px;
+    margin: 5px 10px 5px 0;
+    flex-direction: column;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+  }
+
+  img {
+    height: 30px;
+    width: auto;
+    margin-bottom: 5px;
+  }
+}

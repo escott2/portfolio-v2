@@ -1,6 +1,9 @@
 @use "../../styles/abstracts/" as *;
 
 .aboutInfo {
+  padding: 0 20px 20px 20px;
+  border-radius: $main-section-border-radius;
+
   h3 {
     @include heading-3;
   }
@@ -11,48 +14,34 @@
 }
 
 .overviewSection {
-  padding: 20px;
+  padding: 0 20px 20px 20px;
   padding-left: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // border: 1px solid black;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-evenly;
   }
 }
 
 .overviewImg {
-  max-width: 175px;
+  max-width: 200px;
   width: 100%;
   height: auto;
   flex: 1;
-  border: 1px solid $light-grey;
-  box-shadow: $common-box-shadow;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .overviewText {
+  max-width: 650px;
   font-size: 18px;
   padding: 40px 0;
   flex: 1;
 
-  @media screen and (min-width: $media-breakpoint-small) {
-    padding: 20px 80px;
-  }
-}
-
-.skillsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  padding-bottom: 20px;
-
-  li {
-    background-color: $light-cyan;
-    padding: 15px 30px;
-    margin: 5px 10px 5px 0;
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 40px 0 40px 40px;
   }
 }
 
@@ -74,8 +63,8 @@
   flex-direction: column;
   align-items: start;
   background-color: $white;
-  box-shadow: $common-box-shadow;
-  border: 1px solid $light-grey;
+  border: 1px solid $light-cyan;
+  border-radius: 10px;
   width: 100%;
   max-width: 500px;
 
@@ -107,15 +96,10 @@
   height: auto;
 }
 
-.aboutInfo {
-  padding: 20px;
-  border-radius: $main-section-border-radius;
-}
-
 .aboutSubsection {
   padding: 10px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
-    padding: 30px;
+    padding: 0 30px 30px 30px;
   }
 }

@@ -2,25 +2,13 @@ import styles from "./About.module.scss";
 import stScholasticaLogo from "../../assets/st-scholastica-logo.svg";
 import winonaStateLogo from "../../assets/winona-state-logo.svg";
 import mPulseLogo from "../../assets/mPulse-logo.png";
-import aboutImage from "../../assets/profile-mask-blue.png";
+import aboutImage from "../../assets/desk.jpeg";
 import { combineClasses } from "../../utils";
 import { MainSectionContainer, MainSectionHeading } from "../../components";
-import { motion } from "framer-motion";
+import { SkillsList } from "./components";
+import { languageSkillData } from "./data";
 
 function About() {
-  const listVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, scale: 0.75 },
-    show: { opacity: 1, scale: 1 },
-  };
-
   return (
     <MainSectionContainer sectionName="about">
       <MainSectionHeading sectionName="About" />
@@ -35,7 +23,7 @@ function About() {
         >
           <img
             src={aboutImage}
-            alt="smiling woman profile picture"
+            alt="Desk with laptop, monitor, and keyboard."
             className={styles.overviewImg}
           />
           <p className={styles.overviewText}>
@@ -50,27 +38,26 @@ function About() {
         <section className={styles.aboutSubsection}>
           <h3 className={styles.headingThree}>Skills</h3>
           <h4>Programming Languages</h4>
+
+          <SkillsList skillsData={languageSkillData} />
+          {/* 
+          <h4>Tools and Technologies</h4>
           <motion.ul
             className={styles.skillsContainer}
             variants={listVariants}
             initial="hidden"
-            animate="show"
+            whileInView="show"
+            viewport={{ once: true }}
           >
-            <motion.li variants={itemVariants}>HTML</motion.li>
-            <motion.li variants={itemVariants}>CSS</motion.li>
-            <motion.li variants={itemVariants}>JavaScript</motion.li>
-            <motion.li variants={itemVariants}>TypeScript</motion.li>
-          </motion.ul>
-          <h4>Tools and Technologies</h4>
-          <ul className={styles.skillsContainer}>
-            <li>React</li>
-            <li>Redux</li>
-            <li>SCSS</li>
-            <li>CSS Modules</li>
-            <li>Styled Components</li>
-            <li>Git</li>
-            <li>Jira</li>
-          </ul>
+            <motion.li variants={itemVariants}>React</motion.li>
+            <motion.li variants={itemVariants}>Redux</motion.li>
+            <motion.li variants={itemVariants}>React Context API</motion.li>
+            <motion.li variants={itemVariants}>Sass</motion.li>
+            <motion.li variants={itemVariants}>CSS Modules</motion.li>
+            <motion.li variants={itemVariants}>Styled Components</motion.li>
+            <motion.li variants={itemVariants}>Git</motion.li>
+            <motion.li variants={itemVariants}>Jira</motion.li>
+          </motion.ul> */}
         </section>
         <section
           className={combineClasses(

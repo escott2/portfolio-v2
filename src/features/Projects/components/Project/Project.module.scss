@@ -21,11 +21,6 @@
   padding: 20px;
 }
 
-.linkText {
-  display: block;
-  text-align: center;
-}
-
 .projectPreview {
   display: flex;
   flex-direction: column;
@@ -51,13 +46,29 @@
   }
 }
 
-.projectStack {
+.projectSkills,
+.projectLinks {
   padding-top: 20px;
   li {
-    font-size: 14px;
+    display: inline-block;
+  }
+}
+
+.projectSkills {
+  li {
+    font-size: 12px;
     padding: 5px 10px;
     background-color: $light-cyan;
-    display: inline-block;
     margin: 0 5px 5px 0;
+  }
+}
+
+.projectLinks {
+  li {
+    margin: 0 15px 5px 0;
+  }
+  img {
+    height: 30px;
+    width: auto;
   }
 }

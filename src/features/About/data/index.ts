@@ -1,0 +1,1 @@
+export { languageSkillData } from "./skillsData";
