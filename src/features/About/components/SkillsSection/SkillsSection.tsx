@@ -1,5 +1,5 @@
 import commonStyles from "../../styles/commonStyles.module.scss";
-import { SkillsList } from "../";
+import { SkillsList } from "../SkillsList";
 import { languageSkillData, technologiesSkillData } from "../../data";
 
 function SkillsSection() {

@@ -1,12 +1,11 @@
-import styles from "./Projects.module.scss";
 import { MainSectionContainer, MainSectionHeading } from "../../components";
-import { Project } from "./components/Project";
+import { ProjectsDisplay } from "./components";
 
 function Projects() {
   return (
     <MainSectionContainer sectionName="projects">
       <MainSectionHeading sectionName="Projects" />
-      <Project />
+      <ProjectsDisplay />
     </MainSectionContainer>
   );
 }

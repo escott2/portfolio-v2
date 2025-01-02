@@ -1,7 +1,11 @@
 import commonStyles from "../../styles/commonStyles.module.scss";
 import styles from "./ExperienceSection.module.scss";
 import { combineClasses } from "../../../../utils";
-import { BackgroundCard, BackgroundImage, BackgroundInfo } from "..";
+import {
+  BackgroundCard,
+  BackgroundImage,
+  BackgroundInfo,
+} from "../BackgroundCard";
 import mPulseLogo from "../../../../assets/mPulse-logo.png";
 
 function ExperienceSection() {

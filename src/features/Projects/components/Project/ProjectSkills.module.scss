@@ -1,0 +1,13 @@
+@use "../../../../styles/abstracts/" as *;
+
+.projectSkills {
+  padding-top: 20px;
+
+  li {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 10px;
+    background-color: $light-cyan;
+    margin: 0 5px 5px 0;
+  }
+}
