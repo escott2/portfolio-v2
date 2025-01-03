@@ -73,20 +73,12 @@
 
     & {
       display: block;
-      background-color: transparent;
-      color: $text-color;
-      transition: all 0.25s linear;
+      opacity: 0;
+      transition: opacity 0.25s linear;
     }
 
     &.emphasizeButton {
-      background-color: $primary-button-background-color;
-      color: $primary-button-color;
-
-      &:hover {
-        background-color: $primary-button-hover-background-color;
-        color: $primary-button-hover-color;
-        // border: $primary-button-border;
-      }
+      opacity: 1;
     }
   }
 }

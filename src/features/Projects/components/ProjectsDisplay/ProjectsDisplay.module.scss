@@ -1,5 +1,9 @@
 @use "../../../../styles/abstracts/" as *;
 
+.projectsDisplayContainer {
+  padding-bottom: 60px;
+}
+
 .projectTitle {
   @include heading-3;
   text-align: center;

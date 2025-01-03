@@ -10,7 +10,7 @@ import { projectData } from "../../data";
 
 function ProjectsDisplay() {
   return (
-    <>
+    <div className={styles.projectsDisplayContainer}>
       {projectData.map((project) => (
         <Project key={project.title}>
           <h3 className={styles.projectTitle}>{project.title}</h3>
@@ -31,7 +31,7 @@ function ProjectsDisplay() {
           </div>
         </Project>
       ))}
-    </>
+    </div>
   );
 }
 
