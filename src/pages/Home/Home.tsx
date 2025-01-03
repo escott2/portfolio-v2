@@ -120,7 +120,7 @@ function Home({ hasScrolledDown }: HomeProps) {
                     to="projects"
                     spy={true}
                     smooth={true}
-                    offset={-120}
+                    offset={-150}
                     duration={0}
                     className={styles.link}
                   >
@@ -131,7 +131,7 @@ function Home({ hasScrolledDown }: HomeProps) {
                     to="about"
                     spy={true}
                     smooth={true}
-                    offset={-120}
+                    offset={-150}
                     duration={0}
                     className={styles.link}
                   >
@@ -142,7 +142,7 @@ function Home({ hasScrolledDown }: HomeProps) {
                     to="contact"
                     spy={true}
                     smooth={true}
-                    offset={-120}
+                    offset={-150}
                     duration={0}
                     className={styles.link}
                   >

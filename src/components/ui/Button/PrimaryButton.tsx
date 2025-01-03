@@ -1,6 +1,7 @@
 import { default as BaseButton } from "./BaseButton";
+import { ComponentProps } from "react";
 
-interface PrimaryButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface PrimaryButtonProps extends ComponentProps<"button"> {
   children: React.ReactNode;
   customClasses?: string;
 }

@@ -1,6 +1,7 @@
 import styles from "./BaseButton.module.scss";
+import { ComponentProps } from "react";
 
-interface BaseButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface BaseButtonProps extends ComponentProps<"button"> {
   children: React.ReactNode;
   customClasses?: string;
 }

@@ -1,43 +1,40 @@
+import { FC, InputHTMLAttributes } from "react";
 import styles from "./Input.module.scss";
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  type: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  id: string;
   customInputClasses?: string;
   hint?: string;
   customLabelClasses?: string;
   error?: string;
 }
 
-function Input({
+const Input: FC<InputProps> = ({
   label,
-  type,
-  value,
-  onChange,
+  id,
   customInputClasses = "",
   hint,
   customLabelClasses = "",
   error,
-}: InputProps) {
+  ...rest
+}: InputProps) => {
   return (
     <>
       {label && (
-        <label className={`${styles.label} ${customLabelClasses}`}>
+        <label className={`${styles.label} ${customLabelClasses}`} htmlFor={id}>
           {label}
         </label>
       )}
       {hint && <p className={styles.hint}>{hint}</p>}
       {error && <p className={styles.error}>{error}</p>}
       <input
-        type={type}
-        value={value}
-        onChange={onChange}
+        id={id}
         className={`${styles.input} ${customInputClasses}`}
+        {...rest}
       />
     </>
   );
-}
+};
 
 export default Input;

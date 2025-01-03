@@ -1,7 +1,8 @@
 import { default as BaseButton } from "./BaseButton";
 import styles from "./FullAreaButton.module.scss";
+import { ComponentProps } from "react";
 
-interface FullAreaButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+interface FullAreaButtonProps extends ComponentProps<"button"> {
   children: React.ReactNode;
   customClasses?: string;
 }

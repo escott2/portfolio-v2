@@ -1,0 +1,9 @@
+@use "../../../styles/abstracts/" as *;
+
+.label {
+  @include form-label;
+}
+
+.input {
+  @include textarea;
+}

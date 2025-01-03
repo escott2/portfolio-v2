@@ -1,11 +1,7 @@
 @use "../../../styles/abstracts/" as *;
 
 .label {
-  padding-right: 10px;
-  padding-left: 5px;
-  margin: $form-element-margin;
-  font-weight: 700;
-  font-size: 16px;
+  @include form-label;
 }
 
 .input {

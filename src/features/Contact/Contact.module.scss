@@ -8,3 +8,18 @@
 .sectionTitle {
   @include main-section-title;
 }
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto 10px;
+}
+
+.formButton {
+  @include primary-button;
+  display: block;
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+}
