@@ -22,6 +22,19 @@ function Header({ hasScrolledDown }: HeaderProps) {
           <img src={profilePic} className={styles.profileImg} />
         </div>
 
+        <Button
+          to="landing"
+          spy={true}
+          smooth={true}
+          offset={-200}
+          duration={500}
+          className={`${styles.scrollToTopButton} ${
+            hasScrolledDown && styles.emphasizeButton
+          }`}
+          onSetActive={() => handleTabClick("Landing")}
+        >
+          Back to Top
+        </Button>
         <ul className={styles.navList}>
           <li>
             <Link
@@ -72,7 +85,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
             </Link>
           </li>
         </ul>
-        <Button
+        {/* <Button
           to="landing"
           spy={true}
           smooth={true}
@@ -84,7 +97,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
           onSetActive={() => handleTabClick("Landing")}
         >
           Back to Top
-        </Button>
+        </Button> */}
       </div>
     </header>
   );

@@ -1,0 +1,29 @@
+@use "../../../../styles/abstracts/" as *;
+
+.contactSubsection {
+  @include subsection;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  a {
+    display: block;
+    margin: 20px;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+  }
+}

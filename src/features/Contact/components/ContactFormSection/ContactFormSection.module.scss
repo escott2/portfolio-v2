@@ -1,0 +1,30 @@
+@use "../../../../styles/abstracts/" as *;
+
+.contactSubsection {
+  @include subsection;
+}
+
+.formHint {
+  text-align: center;
+}
+
+.contactForm {
+  max-width: 800px;
+  background-color: $light-cyan;
+  padding: 5px 40px 60px 40px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 10px;
+}
+
+.formButton {
+  @include primary-button;
+  display: block;
+  margin: 25px auto 0;
+  width: 100%;
+}
