@@ -1,1 +1,1 @@
-export { default as MainSectionHeading } from "./MainsectionHeading";
+export { default as MainSectionHeading } from "./MainSectionHeading";

@@ -66,11 +66,11 @@ function Home({ hasScrolledDown }: HomeProps) {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
 
-  const handleMouseOver = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseOver = () => {
     setIsTitleHovered(true);
   };
 
-  const handleMouseOut = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const handleMouseOut = () => {
     setIsTitleHovered(false);
   };
 
