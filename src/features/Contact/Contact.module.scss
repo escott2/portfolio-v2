@@ -28,11 +28,36 @@
 
   h3 {
     @include heading-3;
+    text-align: center;
   }
 }
 
 .contactSubsection {
   @include subsection;
+}
+
+.contactLinks {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  a {
+    display: block;
+    margin: 20px;
+  }
+
+  img {
+    width: 50px;
+    height: auto;
+  }
 }
 
 .contactForm {
@@ -41,4 +66,8 @@
   padding: 40px;
   margin: 20px auto;
   border-radius: 10px;
+}
+
+.formHint {
+  text-align: center;
 }

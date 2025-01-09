@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./Contact.module.scss";
 import { MainSectionContainer, MainSectionHeading } from "../../components";
 import { Input, Textarea } from "../../components";
+import gitHubIcon from "../../assets/githubIcon.svg";
+import linkedInIcon from "../../assets/linkedin-icon.svg";
 
 function Contact() {
   const [name, setName] = useState("");
@@ -42,9 +44,11 @@ function Contact() {
     <MainSectionContainer sectionName="contact">
       <MainSectionHeading sectionName="Contact" />
       <div className={styles.contactInfo}>
-        <section className={styles.contactSubsection}></section>
         <section className={styles.contactSubsection}>
-          <h3>Send an Email</h3>
+          <h3>Let's have a conversation</h3>
+          <p className={styles.formHint}>
+            Send me an email using the form below
+          </p>
           <form
             target="_blank"
             action="https://formsubmit.co/emilyscottmn@gmail.com"
@@ -99,6 +103,30 @@ function Contact() {
           </form>
           {isSubmitting && <p>Message sening</p>}
           {submissionSuccess && <p>Message sent!</p>}
+        </section>
+        <section className={styles.contactSubsection}>
+          <ul className={styles.contactLinks}>
+            <li>
+              <h3>Let's connect on LinkedIn</h3>
+              <a
+                href="https://www.linkedin.com/in/emily-e-scott/"
+                target="_blank"
+                aria-label="LinkedIn profile"
+              >
+                <img src={linkedInIcon} alt="LinkedIn logo" />
+              </a>
+            </li>
+            <li>
+              <h3>Follow my work on GitHub</h3>
+              <a
+                href="https://github.com/escott2"
+                target="_blank"
+                aria-label="GitHub profile"
+              >
+                <img src={gitHubIcon} alt="GitHub logo" />
+              </a>
+            </li>
+          </ul>
         </section>
       </div>
     </MainSectionContainer>
