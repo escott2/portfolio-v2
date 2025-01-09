@@ -41,59 +41,66 @@ function Contact() {
   return (
     <MainSectionContainer sectionName="contact">
       <MainSectionHeading sectionName="Contact" />
-      <form
-        target="_blank"
-        action="https://formsubmit.co/emilyscottmn@gmail.com"
-        method="POST"
-        onSubmit={handleSubmit}
-      >
-        <input type="hidden" name="_captcha" value="false" />
-        <input
-          type="hidden"
-          name="_subject"
-          value="Portfolio Contact Submission"
-        />
-        <div className={styles.formGroup}>
-          <Input
-            label="Name"
-            id="name"
-            type="text"
-            value={name}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-              setName(e.target.value)
-            }
-            required
-            name="name"
-            placeholder="Full name"
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <Input
-            label="Email"
-            id="email"
-            type="email"
-            placeholder="Email address"
-            required
-            name="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <Textarea
-            label="Message"
-            id="message"
-            placeholder="Your message"
-            name="message"
-            required
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          />
-        </div>
-        <input type="submit" className={styles.formButton} />
-      </form>
-      {isSubmitting && <p>Message sening</p>}
-      {submissionSuccess && <p>Message sent!</p>}
+      <div className={styles.contactInfo}>
+        <section className={styles.contactSubsection}></section>
+        <section className={styles.contactSubsection}>
+          <h3>Send an Email</h3>
+          <form
+            target="_blank"
+            action="https://formsubmit.co/emilyscottmn@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+            className={styles.contactForm}
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Portfolio Contact Submission"
+            />
+            <div className={styles.formGroup}>
+              <Input
+                label="Name"
+                id="name"
+                type="text"
+                value={name}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setName(e.target.value)
+                }
+                required
+                name="name"
+                placeholder="Full name"
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <Input
+                label="Email"
+                id="email"
+                type="email"
+                placeholder="Email address"
+                required
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div className={styles.formGroup}>
+              <Textarea
+                label="Message"
+                id="message"
+                placeholder="Your message"
+                name="message"
+                required
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              />
+            </div>
+            <input type="submit" className={styles.formButton} />
+          </form>
+          {isSubmitting && <p>Message sening</p>}
+          {submissionSuccess && <p>Message sent!</p>}
+        </section>
+      </div>
     </MainSectionContainer>
   );
 }

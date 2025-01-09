@@ -12,14 +12,33 @@
 .formGroup {
   display: flex;
   flex-direction: column;
-  max-width: 600px;
   margin: 0 auto 10px;
 }
 
 .formButton {
   @include primary-button;
   display: block;
-  margin: 0 auto;
+  margin: 25px auto 0;
   max-width: 600px;
   width: 100%;
+}
+
+.contactInfo {
+  padding: $main-section-info-padding;
+
+  h3 {
+    @include heading-3;
+  }
+}
+
+.contactSubsection {
+  @include subsection;
+}
+
+.contactForm {
+  max-width: 800px;
+  background-color: $light-cyan;
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 10px;
 }

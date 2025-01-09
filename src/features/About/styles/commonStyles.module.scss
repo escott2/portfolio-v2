@@ -1,11 +1,7 @@
 @use "../../../styles/abstracts/" as *;
 
 .aboutSubsection {
-  padding: 10px;
-
-  @media screen and (min-width: $media-breakpoint-medium) {
-    padding: 0 30px 30px 30px;
-  }
+  @include subsection;
 }
 
 .backgroundContainer {

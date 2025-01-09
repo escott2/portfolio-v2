@@ -1,7 +1,7 @@
 @use "../../styles/abstracts/" as *;
 
 .aboutInfo {
-  padding: 0 20px 20px 20px;
+  padding: $main-section-info-padding;
   border-radius: $main-section-border-radius;
 
   h3 {
