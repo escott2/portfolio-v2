@@ -9,7 +9,6 @@ function App() {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      console.log(window.scrollY);
       if (window.scrollY > 1) {
         setHasScrolledDown(true);
       } else {

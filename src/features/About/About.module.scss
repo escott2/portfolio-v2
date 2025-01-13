@@ -4,6 +4,10 @@
   padding: $main-section-info-padding;
   border-radius: $main-section-border-radius;
 
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: $main-section-info-padding-desktop;
+  }
+
   h3 {
     @include heading-3;
   }

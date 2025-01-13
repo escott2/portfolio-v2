@@ -2,7 +2,9 @@
 
 .sectionContainer {
   @include main-section-container;
-  height: 100vh;
+  & {
+    height: 100vh;
+  }
 }
 
 .sectionTitle {
@@ -26,6 +28,10 @@
 .contactInfo {
   padding: $main-section-info-padding;
 
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: $main-section-info-padding-desktop;
+  }
+
   h3 {
     @include heading-3;
     text-align: center;
@@ -39,6 +45,10 @@
   padding-top: 6px;
   margin: 20px auto;
   border-radius: 10px;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 0 40px 40px;
+  }
 }
 
 .formHint {
