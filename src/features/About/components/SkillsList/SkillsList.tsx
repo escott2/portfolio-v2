@@ -16,6 +16,8 @@ function SkillsList({ skillsData, customClasses = "" }: SkillsListProps) {
     },
   };
 
+  const isDarkMode = true;
+
   const itemVariants = {
     hidden: { opacity: 0, rotate: -45, scale: 0.25, y: -10, x: -20 },
     show: {
@@ -40,7 +42,11 @@ function SkillsList({ skillsData, customClasses = "" }: SkillsListProps) {
       viewport={{ once: true }}
     >
       {skillsData.map((skill) => (
-        <motion.li key={skill.language} variants={itemVariants}>
+        <motion.li
+          key={skill.language}
+          variants={itemVariants}
+          className={`${isDarkMode && styles.moonBackground}`}
+        >
           <img src={skill.iconSrc} alt={`${skill.language} Icon`} />
           {skill.language}
         </motion.li>

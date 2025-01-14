@@ -1,24 +1,36 @@
 $dark-blue: #223945;
-$pale-blue: #edf5f8;
 $light-cyan: #c8e1ea;
-$orange: #944621;
-$dark-orange: #d53f17;
-$light-grey: #f6fafb;
-$grey: #f5f5f5;
+$blue-grey: #f6fafb;
+$midnight-void: #0a1114;
+$deep-night: #111c22;
 $white: #fff;
 $black: #000;
-$red: #ff0000;
 
-$error-color: $red;
-$primary-color: $dark-blue;
-$secondary-color: $light-cyan;
-$accent-color: $orange;
-$dark-accent-color: $dark-orange;
-$text-color: $black;
+$accent-color: $dark-blue;
+$primary-color-light: $light-cyan;
+$primary-color-dark: $dark-blue;
+$background-color-light: $white;
+$background-color-dark: $deep-night;
+$section-background-light: $blue-grey;
+$section-background-dark: $midnight-void;
+$text-color-light: $black;
+$text-color-dark: $white;
+
+.lightMode {
+  --primary-color: #{$primary-color-light};
+  --background-color: #{$background-color-light};
+  --section-background: #{$section-background-light};
+  --text-color: #{$text-color-light};
+}
+
+.darkMode {
+  --primary-color: #{$primary-color-dark};
+  --background-color: #{$background-color-dark};
+  --section-background: #{$section-background-dark};
+  --text-color: #{$text-color-dark};
+}
 
 $common-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-
-$error-text-color: $error-color;
 
 $media-breakpoint-small: 576px;
 $media-breakpoint-medium: 768px;
@@ -44,7 +56,7 @@ $primary-button-background: linear-gradient(
   to bottom right,
   #3b6378,
   #335567,
-  $primary-color
+  $accent-color
 );
 $primary-button-box-shadow: $common-box-shadow;
 $primary-button-hover-background: $white;

@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       {isLoading && <p>Loading</p>}
-      <div className="app-container">
+      <div className="app-container darkMode">
         <Header hasScrolledDown={hasScrolledDown} />
         <Home hasScrolledDown={hasScrolledDown} />
       </div>

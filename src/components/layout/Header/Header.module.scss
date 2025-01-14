@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  background-color: white;
+  background-color: var(--background-color);
   z-index: 3;
   width: 100%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
