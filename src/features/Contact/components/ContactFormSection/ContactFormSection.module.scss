@@ -11,9 +11,13 @@
 .contactForm {
   max-width: 800px;
   background-color: $light-cyan;
-  padding: 5px 40px 60px 40px;
+  padding: 5px 20px 60px;
   margin: 20px auto;
   border-radius: 10px;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 5px 40px 60px;
+  }
 }
 
 .formGroup {

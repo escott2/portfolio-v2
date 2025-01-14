@@ -12,21 +12,28 @@
   background-color: $light-cyan;
   padding: 20px 0 50px;
   position: relative;
-  cursor: none;
+  @media (pointer: fine) {
+    cursor: none;
+  }
 }
 
 .cursor {
-  background-color: #944621;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  pointer-events: none;
-  will-change: transform;
-  mix-blend-mode: difference;
+  display: none;
+
+  @media (pointer: fine) {
+    display: block;
+    background-color: #944621;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+    mix-blend-mode: difference;
+  }
 }
 
 .titleContainerBottom {
@@ -64,10 +71,16 @@
 }
 
 .introSectionContainer {
-  @include layout-container(30px);
-  margin-bottom: 50px;
-  position: relative;
-  padding-top: 0;
+  @include main-section-container;
+
+  & {
+    position: relative;
+    padding-top: 0;
+  }
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding-top: 0;
+  }
 }
 
 .introContent {
@@ -90,7 +103,7 @@
 }
 
 .introText {
-  padding: 30px;
+  padding: 10px;
   margin: 0 auto;
   max-width: 650px;
   min-width: 300px;
@@ -107,6 +120,7 @@
 
   @media screen and (min-width: $media-breakpoint-medium) {
     min-width: 400px;
+    padding: 30px;
   }
 }
 

@@ -1,8 +1,9 @@
 .linkContainer {
-  display: block;
   width: 100%;
   max-width: 400px;
   padding: 20px;
   height: 400px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }

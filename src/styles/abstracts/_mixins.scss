@@ -9,10 +9,13 @@
 }
 
 @mixin main-section-container {
-  @include layout-container(60px 30px);
-  margin-bottom: 50px;
+  @include layout-container(30px 10px);
+  & {
+    margin-bottom: 0;
+  }
 
   @media screen and (min-width: $media-breakpoint-medium) {
+    margin-bottom: 40px;
     padding: 30px;
   }
 }
