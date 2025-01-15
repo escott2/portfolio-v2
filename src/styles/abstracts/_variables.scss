@@ -1,26 +1,27 @@
-$dark-blue: #223945;
-$light-cyan: #c8e1ea;
 $blue-grey: #f6fafb;
-$midnight-void: #0a1114;
+$light-cyan: #c8e1ea;
+$dark-blue: #223945;
 $deep-night: #111c22;
+$midnight-void: #0a1114;
 $white: #fff;
 $black: #000;
 
 $accent-color: $dark-blue;
 $primary-color-light: $light-cyan;
-$primary-color-dark: $dark-blue;
+$primary-color-dark: $deep-night;
 $background-color-light: $white;
-$background-color-dark: $deep-night;
+$background-color-dark: $midnight-void;
 $section-background-light: $blue-grey;
-$section-background-dark: $midnight-void;
+$section-background-dark: $deep-night;
 $text-color-light: $black;
 $text-color-dark: $white;
 
-.lightMode {
+:root {
   --primary-color: #{$primary-color-light};
   --background-color: #{$background-color-light};
   --section-background: #{$section-background-light};
   --text-color: #{$text-color-light};
+  --input-background-color: #{$white};
 }
 
 .darkMode {
@@ -28,6 +29,7 @@ $text-color-dark: $white;
   --background-color: #{$background-color-dark};
   --section-background: #{$section-background-dark};
   --text-color: #{$text-color-dark};
+  --input-background-color: #{$midnight-void};
 }
 
 $common-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);

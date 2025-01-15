@@ -1,6 +1,6 @@
 import styles from "./ContactLinkSection.module.scss";
 import linkedInIcon from "../../../../assets/linkedin-icon.svg";
-import gitHubIcon from "../../../../assets/githubIcon.svg";
+import { GitHubSVG } from "../../../../components/svg";
 
 function ContactLinkSection() {
   return (
@@ -23,7 +23,7 @@ function ContactLinkSection() {
             target="_blank"
             aria-label="GitHub profile"
           >
-            <img src={gitHubIcon} alt="GitHub logo" />
+            <GitHubSVG className={styles.gitHubIcon} />
           </a>
         </li>
       </ul>

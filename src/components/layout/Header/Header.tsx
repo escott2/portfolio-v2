@@ -3,6 +3,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import profilePic from "../../../assets/profile-mask-blue.png";
 import { Link, Button } from "react-scroll";
+import { ThemeContext } from "../../../store/theme-context";
+import { useContext } from "react";
 
 interface HeaderProps {
   hasScrolledDown: boolean;
@@ -13,6 +15,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
   const handleTabClick = (tabName: string) => {
     setSelectedTab(tabName);
   };
+  const { toggleTheme } = useContext(ThemeContext);
 
   return (
     <header className={styles.header}>
@@ -85,19 +88,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
             </Link>
           </li>
         </ul>
-        {/* <Button
-          to="landing"
-          spy={true}
-          smooth={true}
-          offset={-200}
-          duration={500}
-          className={`${styles.scrollToTopButton} ${
-            hasScrolledDown && styles.emphasizeButton
-          }`}
-          onSetActive={() => handleTabClick("Landing")}
-        >
-          Back to Top
-        </Button> */}
+        <button onClick={toggleTheme}>Theme</button>
       </div>
     </header>
   );

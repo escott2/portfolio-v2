@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import styles from "./SkillsList.module.scss";
 import { Skill } from "../../types";
+import { useContext } from "react";
+import { ThemeContext } from "../../../../store";
 
 interface SkillsListProps {
   skillsData: Skill[];
@@ -16,7 +18,7 @@ function SkillsList({ skillsData, customClasses = "" }: SkillsListProps) {
     },
   };
 
-  const isDarkMode = true;
+  const { isDarkMode } = useContext(ThemeContext);
 
   const itemVariants = {
     hidden: { opacity: 0, rotate: -45, scale: 0.25, y: -10, x: -20 },

@@ -41,6 +41,8 @@
 
 @mixin text-input {
   border: $input-border;
+  background-color: var(--input-background-color);
+  color: var(--text-color);
   margin: $input-margin;
   padding: $input-padding;
   border-radius: $input-border-radius;

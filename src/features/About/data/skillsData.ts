@@ -10,7 +10,7 @@ import sassIcon from "../../../assets/skillsIcons/sassIcon.svg";
 import cssModulesIcon from "../../../assets/skillsIcons/cssModulesIcon.svg";
 import styledComponentsIcon from "../../../assets/skillsIcons/styledComponentsIcon.svg";
 import framerMotionIcon from "../../../assets/skillsIcons/framerMotionIcon.svg";
-import githubIcon from "../../../assets/githubIcon.svg";
+import githubIcon from "../../../assets/skillsIcons/githubIcon.svg";
 import jiraIcon from "../../../assets/skillsIcons/jiraIcon.svg";
 
 const languageSkillData: Skill[] = [

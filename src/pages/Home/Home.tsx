@@ -2,11 +2,11 @@ import { useRef, useState } from "react";
 import styles from "./Home.module.scss";
 import { About, Projects, Contact } from "../../features";
 import laptopImg from "../../assets/laptop.jpg";
-import handWaveOutline from "../../assets/hand-wave-outline.svg";
 import { useEffect } from "react";
 import { Link, animateScroll as scroll, Element } from "react-scroll";
 import { IconButton } from "../../components/ui/Button";
 import { useAnimate, motion, AnimatePresence } from "framer-motion";
+import { HandWaveSVG } from "../../components/svg";
 
 interface HomeProps {
   hasScrolledDown: boolean;
@@ -98,14 +98,9 @@ function Home({ hasScrolledDown }: HomeProps) {
               <h2 className={styles.sectionTitle}>
                 Hello, I'm Emily Scott, a front-end engineer.
               </h2>
-
-              <motion.img
-                src={handWaveOutline}
-                alt="hand wave outline"
-                className={styles.handWaveOutline}
-                variants={handWaveVariants}
-                animate="animate"
-              />
+              <motion.div variants={handWaveVariants} animate="animate">
+                <HandWaveSVG className={styles.handWaveOutline} />
+              </motion.div>
             </div>
             <div className={styles.titleContainerBottom}></div>
           </div>
