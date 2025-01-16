@@ -5,6 +5,8 @@ import profilePic from "../../../assets/profile-mask-blue.png";
 import { Link, Button } from "react-scroll";
 import { ThemeContext } from "../../../store/theme-context";
 import { useContext } from "react";
+import lightMode from "../../../assets/light-mode.svg";
+import darkMode from "../../../assets/dark-mode.svg";
 
 interface HeaderProps {
   hasScrolledDown: boolean;
@@ -15,7 +17,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
   const handleTabClick = (tabName: string) => {
     setSelectedTab(tabName);
   };
-  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme, isDarkMode } = useContext(ThemeContext);
 
   return (
     <header className={styles.header}>
@@ -88,7 +90,13 @@ function Header({ hasScrolledDown }: HeaderProps) {
             </Link>
           </li>
         </ul>
-        <button onClick={toggleTheme}>Theme</button>
+        <button onClick={toggleTheme} className={styles.toggleThemeButton}>
+          {isDarkMode ? (
+            <img src={lightMode} alt="sun icon" />
+          ) : (
+            <img src={darkMode} alt="moon icon" />
+          )}
+        </button>
       </div>
     </header>
   );

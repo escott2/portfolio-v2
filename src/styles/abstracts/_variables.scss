@@ -4,6 +4,8 @@ $dark-blue: #223945;
 $deep-night: #111c22;
 $midnight-void: #0a1114;
 $white: #fff;
+$grey: #dddddd;
+$accessible-grey: #525252;
 $black: #000;
 
 $accent-color: $dark-blue;
@@ -22,6 +24,8 @@ $text-color-dark: $white;
   --section-background: #{$section-background-light};
   --text-color: #{$text-color-light};
   --input-background-color: #{$white};
+  --input-border-color: #{$grey};
+  --input-placeholder-color: #{$accessible-grey};
 }
 
 .darkMode {
@@ -30,6 +34,8 @@ $text-color-dark: $white;
   --section-background: #{$section-background-dark};
   --text-color: #{$text-color-dark};
   --input-background-color: #{$midnight-void};
+  --input-border-color: #{$dark-blue};
+  --input-placeholder-color: #{$light-cyan};
 }
 
 $common-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
@@ -42,11 +48,12 @@ $media-breakpoint-extra-large: 1200px;
 $layout-padding: 20px;
 $form-element-margin: 5px 5px 5px 0;
 
-$input-border: 1px solid #dddddd;
+$input-border: 1px solid var(--input-border-color);
 $input-margin: 5px;
-$input-padding: 5px;
+$input-padding: 10px;
 $input-border-radius: 5px;
 $input-height: 40px;
+$input-placeholder-color: var(--input-placeholder-color);
 
 $primary-button-font-size: 18px;
 $primary-button-padding: 5px 25px;

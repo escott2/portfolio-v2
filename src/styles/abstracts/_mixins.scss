@@ -47,6 +47,10 @@
   padding: $input-padding;
   border-radius: $input-border-radius;
   height: $input-height;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
 }
 
 @mixin textarea {
