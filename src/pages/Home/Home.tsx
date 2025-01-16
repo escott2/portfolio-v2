@@ -1,4 +1,3 @@
-import { useRef, useState } from "react";
 import styles from "./Home.module.scss";
 import { About, Projects, Contact } from "../../features";
 import laptopImg from "../../assets/laptop.jpg";
@@ -6,40 +5,14 @@ import { useEffect } from "react";
 import { Link, animateScroll as scroll, Element } from "react-scroll";
 import { IconButton } from "../../components/ui/Button";
 import { useAnimate, motion, AnimatePresence } from "framer-motion";
-import { HandWaveSVG } from "../../components/svg";
+import { TitleContainer } from "./components";
 
 interface HomeProps {
   hasScrolledDown: boolean;
 }
 
-interface MousePosition {
-  x: number;
-  y: number;
-}
-
 function Home({ hasScrolledDown }: HomeProps) {
   const [scope, animate] = useAnimate();
-  const cursorContainerRef = useRef(null);
-  const [isTitleHovered, setIsTitleHovered] = useState(false);
-  const [mousePosition, setMousePosition] = useState<MousePosition>({
-    x: 0,
-    y: 0,
-  });
-
-  const cursorVariants = {
-    default: {
-      x: mousePosition.x - 15,
-      y: mousePosition.y - 30,
-      opacity: 1,
-
-      transition: {
-        default: {
-          type: "smooth",
-          duration: 0,
-        },
-      },
-    },
-  };
 
   useEffect(() => {
     if (hasScrolledDown) {
@@ -58,53 +31,11 @@ function Home({ hasScrolledDown }: HomeProps) {
     scroll.scrollToTop();
   };
 
-  const handWaveVariants = {
-    animate: { rotate: [-45, 0, -45, 0] },
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
-
-  const handleMouseOver = () => {
-    setIsTitleHovered(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsTitleHovered(false);
-  };
-
   return (
     <>
       <main className={styles.homeContainer}>
         <Element name="landing">
-          <AnimatePresence>
-            {isTitleHovered && (
-              <motion.div
-                className={styles.cursor}
-                variants={cursorVariants}
-                animate="default"
-              ></motion.div>
-            )}
-          </AnimatePresence>
-          <div
-            className={styles.titleContainer}
-            ref={cursorContainerRef}
-            onMouseOver={handleMouseOver}
-            onMouseOut={handleMouseOut}
-            onMouseMove={handleMouseMove}
-          >
-            <div className={styles.titleContainerContent}>
-              <h2 className={styles.sectionTitle}>
-                Hello, I'm Emily Scott, a front-end engineer.
-              </h2>
-              <motion.div variants={handWaveVariants} animate="animate">
-                <HandWaveSVG className={styles.handWaveOutline} />
-              </motion.div>
-            </div>
-            <div className={styles.titleContainerBottom}></div>
-          </div>
-
+          <TitleContainer />
           <div className={styles.introSectionContainer}>
             <div className={styles.introContent}>
               <div className={styles.introText}>
