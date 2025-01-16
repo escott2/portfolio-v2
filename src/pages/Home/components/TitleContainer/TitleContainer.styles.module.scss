@@ -4,6 +4,8 @@
   background-color: var(--primary-color);
   padding: 20px 0 50px;
   position: relative;
+  display: flex;
+  justify-content: center;
   @media (pointer: fine) {
     cursor: none;
   }
@@ -14,10 +16,10 @@
 
   @media (pointer: fine) {
     display: block;
-    background-color: #944621;
+    background-color: black;
     border-radius: 50%;
-    height: 30px;
-    width: 30px;
+    height: 45px;
+    width: 45px;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,25 +34,34 @@
   @include main-section-title;
 
   & {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 
 .titleContainerContent {
   @include layout-container(0);
-  display: flex;
+  padding-bottom: 0;
+
+  margin: 20px 0 0;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
   @media screen and (min-width: $media-breakpoint-large) {
     flex-direction: row;
+    padding-bottom: 20px;
   }
 }
 
 .handWaveOutline {
   height: 40px;
   width: 40px;
+  margin-top: 20px;
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    margin: 0;
+  }
 }
 
 .titleContainerBottom {
