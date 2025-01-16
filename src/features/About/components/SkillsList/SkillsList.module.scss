@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #c8e1ea;
+    background-color: var(--primary-color);
     padding: 10px 15px;
     margin: 5px 10px 5px 0;
     flex-direction: column;
@@ -18,6 +18,16 @@
     border-radius: 50%;
     text-align: center;
     font-size: 12px;
+    color: $black;
+  }
+
+  .moonBackground {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(255, 255, 255, 0.5)
+      ),
+      url("../../../../assets/moon.png");
+    background-size: cover;
   }
 
   img {

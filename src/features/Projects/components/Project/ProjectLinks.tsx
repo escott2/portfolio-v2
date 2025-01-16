@@ -1,6 +1,5 @@
 import styles from "./ProjectLinks.module.scss";
-import githubIcon from "../../../../assets/githubIcon.svg";
-import internetIcon from "../../../../assets/internetIcon.svg";
+import { GitHubSVG, InternetSVG } from "../../../../components/svg";
 
 interface ProjectLinks {
   githubURL: string;
@@ -12,12 +11,12 @@ function ProjectLinks({ githubURL, projectURL }: ProjectLinks) {
     <ul className={styles.projectLinks}>
       <li>
         <a href={githubURL} target="_blank" aria-label="GitHub repository">
-          <img src={githubIcon} alt="GitHub icon" />
+          <GitHubSVG className={styles.icon} />
         </a>
       </li>
       <li>
         <a href={projectURL} target="_blank" aria-label="Live website">
-          <img src={internetIcon} alt="Internet icon" />
+          <InternetSVG className={styles.icon} />
         </a>
       </li>
     </ul>

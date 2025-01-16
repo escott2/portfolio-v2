@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  background-color: white;
+  background-color: var(--background-color);
   z-index: 3;
   width: 100%;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
@@ -30,7 +30,11 @@
 .navList {
   display: flex;
   align-items: center;
-  margin: 10px 0;
+  margin: 20px 0;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    margin: 10px 0;
+  }
 
   .link {
     margin: 0 20px;
@@ -78,5 +82,16 @@
     &.emphasizeButton {
       opacity: 1;
     }
+  }
+}
+
+.toggleThemeButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  img {
+    width: 25px;
+    height: auto;
   }
 }

@@ -4,7 +4,10 @@ import { ContactFormSection, ContactLinkSection } from "./components";
 
 function Contact() {
   return (
-    <MainSectionContainer sectionName="contact">
+    <MainSectionContainer
+      sectionName="contact"
+      customClasses={styles.contactSectionContainer}
+    >
       <MainSectionHeading sectionName="Contact" />
       <div className={styles.contactInfo}>
         <ContactFormSection />

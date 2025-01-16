@@ -1,28 +1,7 @@
 @use "../../styles/abstracts/" as *;
 
-.sectionContainer {
-  @include main-section-container;
-  & {
-    height: 100vh;
-  }
-}
-
-.sectionTitle {
-  @include main-section-title;
-}
-
-.formGroup {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto 10px;
-}
-
-.formButton {
-  @include primary-button;
-  display: block;
-  margin: 25px auto 0;
-  max-width: 600px;
-  width: 100%;
+.contactSectionContainer {
+  margin-bottom: 0;
 }
 
 .contactInfo {
@@ -35,71 +14,5 @@
   h3 {
     @include heading-3;
     text-align: center;
-  }
-}
-
-.contactForm {
-  max-width: 800px;
-  background-color: $light-cyan;
-  padding: 40px;
-  padding-top: 6px;
-  margin: 20px auto;
-  border-radius: 10px;
-
-  @media screen and (min-width: $media-breakpoint-medium) {
-    padding: 0 40px 40px;
-  }
-}
-
-.formHint {
-  text-align: center;
-}
-
-.messageStatus {
-  text-align: center;
-  margin: 10px 0;
-  font-size: 16px;
-  min-height: 34px;
-
-  p {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 5px 0;
-  }
-}
-
-.statusSending {
-  background-color: #0098c3;
-}
-
-.statusSent {
-  background-color: #98c369;
-}
-
-.statusError {
-  background-color: #db845c;
-}
-
-.statusContainer {
-  display: flex;
-  padding: 0 10px;
-
-  &.statusError {
-    background-color: #db845c;
-  }
-
-  button {
-    border: none;
-    background-color: transparent;
-    padding: 0;
-    cursor: pointer;
-
-    img {
-      height: 28px;
-      width: auto;
-    }
   }
 }

@@ -1,7 +1,7 @@
 @use "../../styles/abstracts/" as *;
 
 .homeContainer {
-  padding-top: 167px;
+  padding-top: 214px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     padding-top: 120px;
@@ -9,7 +9,7 @@
 }
 
 .titleContainer {
-  background-color: $light-cyan;
+  background-color: var(--primary-color);
   padding: 20px 0 50px;
   position: relative;
   @media (pointer: fine) {
@@ -42,7 +42,7 @@
   position: absolute;
   bottom: 0;
   z-index: 1;
-  background-color: $white;
+  background-color: var(--background-color);
 }
 
 .titleContainerContent {
@@ -89,7 +89,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 18px;
-  background-color: $light-grey;
+  background-color: var(--section-background);
   box-shadow: $main-section-box-shadow;
   border-radius: $main-section-border-radius;
   padding: 20px;
@@ -148,9 +148,6 @@
 }
 
 .scrollToTopButton {
-  height: 40px;
-  width: 40px;
-
   svg {
     height: 25px;
     width: auto;

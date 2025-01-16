@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
-import "./styles/global.scss";
-import { Header } from "./components";
+import { Header, AppContainer } from "./components";
 import { Home } from "./pages";
+import { ThemeContextProvider } from "./store";
 
 function App() {
   const [hasScrolledDown, setHasScrolledDown] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -15,16 +14,16 @@ function App() {
         setHasScrolledDown(false);
       }
     });
-    setIsLoading(false);
   }, []);
 
   return (
     <>
-      {isLoading && <p>Loading</p>}
-      <div className="app-container">
-        <Header hasScrolledDown={hasScrolledDown} />
-        <Home hasScrolledDown={hasScrolledDown} />
-      </div>
+      <ThemeContextProvider>
+        <AppContainer>
+          <Header hasScrolledDown={hasScrolledDown} />
+          <Home hasScrolledDown={hasScrolledDown} />
+        </AppContainer>
+      </ThemeContextProvider>
     </>
   );
 }

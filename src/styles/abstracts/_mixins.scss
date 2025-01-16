@@ -24,7 +24,7 @@
   background-color: $white;
   border-radius: 10px;
   box-shadow: $common-box-shadow;
-  background-color: $light-grey;
+  background-color: var(--section-background);
 }
 
 @mixin subsection {
@@ -41,10 +41,16 @@
 
 @mixin text-input {
   border: $input-border;
+  background-color: var(--input-background-color);
+  color: var(--text-color);
   margin: $input-margin;
   padding: $input-padding;
   border-radius: $input-border-radius;
   height: $input-height;
+
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
 }
 
 @mixin textarea {
@@ -104,7 +110,7 @@
 @mixin main-section-title {
   font-size: $main-section-title-font-size-mobile;
   font-weight: $main-section-title-font-weight;
-  color: $main-section-title-color;
+  color: var(--text-color);
   text-align: center;
   padding-bottom: 20px;
 
