@@ -17,10 +17,16 @@
 }
 
 .introSectionContainer {
+  width: 100%;
+  background-color: $white;
+  position: relative;
+  z-index: 1;
+}
+
+.introSectionContainerInner {
   @include main-section-container;
 
   & {
-    position: relative;
     padding-top: 0;
   }
 
