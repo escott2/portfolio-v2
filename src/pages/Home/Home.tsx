@@ -78,11 +78,13 @@ function Home({ hasScrolledDown }: HomeProps) {
                     if you're interested in working together!
                   </p>
                 </div>
-                <img
-                  src={laptopImg}
-                  className={styles.introImg}
-                  alt="computer on concrete cube"
-                />
+                <div className={styles.introImgContainer}>
+                  <img
+                    src={laptopImg}
+                    className={styles.introImg}
+                    alt="computer on concrete cube"
+                  />
+                </div>
               </div>
             </div>
           </div>
