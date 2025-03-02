@@ -32,21 +32,28 @@
 
 .sectionTitle {
   @include main-section-title;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
 
   & {
     padding: 0 20px;
+  }
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    height: auto;
   }
 }
 
 .titleContainerContent {
   @include layout-container(0);
   padding-bottom: 0;
-
   margin: 20px 0 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  position: relative;
 
   @media screen and (min-width: $media-breakpoint-large) {
     flex-direction: row;
@@ -71,4 +78,10 @@
   bottom: 0;
   z-index: 1;
   background-color: var(--background-color);
+}
+
+.smiley {
+  height: 45px;
+  width: auto;
+  margin: 5px 0;
 }
