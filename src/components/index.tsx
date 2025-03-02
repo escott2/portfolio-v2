@@ -6,7 +6,7 @@ export {
   Loader,
   Link,
 } from "./ui";
-export { PlaySVG, PauseSVG, ClearSVG } from "./svg";
+export { PlaySVG, PauseSVG, ClearSVG, SmileySVG } from "./svg";
 export {
   Header,
   MainSectionContainer,

@@ -1,7 +1,8 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./TitleContainer.styles.module.scss";
-import { HandWaveSVG } from "../../../../components/svg";
+import { SmileySVG } from "../../../../components";
+import { TypeAnimation } from "react-type-animation";
 
 interface MousePosition {
   x: number;
@@ -23,10 +24,6 @@ function TitleContainer() {
     mouseOver: {
       opacity: cursorPathOpacity,
     },
-  };
-
-  const handWaveVariants = {
-    animate: { rotate: [-45, 0, -45, 0] },
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -94,12 +91,19 @@ function TitleContainer() {
           onMouseOver={handleMouseOverTitle}
           onMouseOut={handleMouseOutTitle}
         >
+          <SmileySVG className={styles.smiley} />
           <h2 className={styles.sectionTitle}>
-            Hello, I'm Emily Scott, a front-end engineer.
+            <TypeAnimation
+              sequence={[
+                "",
+                1000,
+                "Hello, I'm Emily Scott, a front-end engineer.",
+                1000,
+              ]}
+              wrapper="span"
+              speed={50}
+            />
           </h2>
-          <motion.div variants={handWaveVariants} animate="animate">
-            <HandWaveSVG className={styles.handWaveOutline} />
-          </motion.div>
         </div>
         <div className={styles.titleContainerBottom}></div>
       </div>
