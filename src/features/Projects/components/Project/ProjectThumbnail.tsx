@@ -10,7 +10,7 @@ interface ProjectThumbnailProps {
 function ProjectThumbnail({ url, imgSrc, imgAltText }: ProjectThumbnailProps) {
   return (
     <Link href={url} customClasses={styles.linkContainer} newWindow={true}>
-      <img src={imgSrc} alt={imgAltText} />
+      <img className={styles.thumbnailImg} src={imgSrc} alt={imgAltText} />
     </Link>
   );
 }

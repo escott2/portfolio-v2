@@ -1,3 +1,5 @@
+@use "../../../../styles/abstracts/" as *;
+
 .linkContainer {
   width: 100%;
   max-width: 400px;
@@ -6,4 +8,9 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+}
+
+.thumbnailImg {
+  box-shadow: $common-box-shadow;
+  padding: 10px;
 }
