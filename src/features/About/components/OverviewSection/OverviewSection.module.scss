@@ -9,12 +9,12 @@
   @media screen and (min-width: $media-breakpoint-medium) {
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0 20px 20px 20px;
+    padding: 0 20px 60px 20px;
   }
 }
 
 .overviewImg {
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
   height: auto;
   flex: 1;

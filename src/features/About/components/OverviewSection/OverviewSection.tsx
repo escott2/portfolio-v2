@@ -13,12 +13,13 @@ function OverviewSection() {
         className={styles.overviewImg}
       />
       <p className={styles.overviewText}>
-        I’m a front-end engineer with three years of experience building and
-        maintaining features for a large-scale web application at mPulse. I’m a
-        people-centric software developer. I value and respect my teammates as
-        we work together to create great user experiences. I embrace challenges
-        with a growth mindset, eager to step outside my comfort zone to find
-        innovative solutions to complex problems.
+        I’m an experienced front-end engineer with Bachelor’s degrees in
+        Computer Information Systems and Psychology. I enjoy blending
+        human-centered thinking with technical expertise to create intuitive,
+        impactful products in collaboration with cross-functional teams. I value
+        the entire development process, from ideation to launch, and
+        continuously adapt and learn as I take on new challenges with a growth
+        mindset.
       </p>
     </section>
   );
