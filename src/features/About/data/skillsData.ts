@@ -12,6 +12,7 @@ import styledComponentsIcon from "../../../assets/skillsIcons/styledComponentsIc
 import framerMotionIcon from "../../../assets/skillsIcons/framerMotionIcon.svg";
 import githubIcon from "../../../assets/skillsIcons/githubIcon.svg";
 import jiraIcon from "../../../assets/skillsIcons/jiraIcon.svg";
+import javaIcon from "../../../assets/skillsIcons/javaIcon.svg";
 
 const languageSkillData: Skill[] = [
   {
@@ -29,6 +30,10 @@ const languageSkillData: Skill[] = [
   {
     language: "TypeScript",
     iconSrc: typescriptIcon,
+  },
+  {
+    language: "Java",
+    iconSrc: javaIcon,
   },
 ];
 
