@@ -32,33 +32,42 @@
 
 .sectionTitle {
   @include main-section-title;
-  min-height: 64px;
   display: flex;
   align-items: center;
+  justify-content: flex-start;
+  min-height: 64px;
+  padding: 0 10px;
+  flex: 1 1;
 
-  & {
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: $media-breakpoint-large) {
+  @media screen and (min-width: $media-breakpoint-medium) {
     height: auto;
+    min-width: 400px;
   }
 }
 
 .titleContainerContent {
   @include layout-container(0);
+  width: 100%;
   padding-bottom: 0;
   margin: 20px 0 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   position: relative;
+  padding: 20px;
 
   @media screen and (min-width: $media-breakpoint-large) {
-    flex-direction: row;
+    padding: 20px 40px 20px 40px;
     padding-bottom: 20px;
   }
+}
+
+.titleContainerHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .handWaveOutline {
@@ -84,4 +93,16 @@
   height: 45px;
   width: auto;
   margin: 5px 0;
+}
+
+.titleContainerInfo {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  min-height: 132px;
+  font-size: 22px;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    min-height: 70px;
+  }
 }

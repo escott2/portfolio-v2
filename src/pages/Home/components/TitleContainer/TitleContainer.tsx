@@ -91,19 +91,29 @@ function TitleContainer() {
           onMouseOver={handleMouseOverTitle}
           onMouseOut={handleMouseOutTitle}
         >
-          <SmileySVG className={styles.smiley} />
-          <h2 className={styles.sectionTitle}>
-            <TypeAnimation
-              sequence={[
-                "",
-                1000,
-                "Hello, I'm Emily Scott, a front-end engineer.",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-            />
-          </h2>
+          <div className={styles.titleContainerHeading}>
+            <h2 className={styles.sectionTitle}>
+              <TypeAnimation
+                sequence={["", 500, "Hello, I'm Emily. Welcome."]}
+                wrapper="span"
+                speed={70}
+                cursor={false}
+              />
+            </h2>
+            <SmileySVG className={styles.smiley} />
+          </div>
+          <TypeAnimation
+            sequence={[
+              "",
+              2000,
+              "I'm an experienced Software Engineer and Health Information Specialist, building expertise in Health Informatics.",
+            ]}
+            wrapper="span"
+            speed={80}
+            cursor={false}
+            preRenderFirstString={false}
+            className={styles.titleContainerInfo}
+          />
         </div>
         <div className={styles.titleContainerBottom}></div>
       </div>
