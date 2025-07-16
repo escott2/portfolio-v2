@@ -5,7 +5,6 @@
   padding: 100px 0 100px;
   position: relative;
   display: flex;
-  // justify-content: center;
   @media (pointer: fine) {
     cursor: none;
   }
@@ -16,7 +15,6 @@
 
   @media (pointer: fine) {
     display: block;
-    border-radius: 50%;
     height: 100px;
     width: 100px;
     position: fixed;
@@ -98,12 +96,17 @@
   width: 100%;
   text-align: left;
   min-height: 36px;
-  font-size: 22px;
-  white-space: nowrap;
+  font-size: 18px;
+
+  @media screen and (min-width: $media-breakpoint-small) {
+    font-size: 22px;
+    white-space: nowrap;
+  }
 }
 
 .skillsContainer {
   display: flex;
+  white-space: nowrap;
 }
 
 .titleContainerSkills {
