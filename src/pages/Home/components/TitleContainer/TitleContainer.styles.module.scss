@@ -2,10 +2,10 @@
 
 .titleContainer {
   background-color: var(--primary-color);
-  padding: 20px 0 50px;
+  padding: 100px 0 100px;
   position: relative;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   @media (pointer: fine) {
     cursor: none;
   }
@@ -16,10 +16,9 @@
 
   @media (pointer: fine) {
     display: block;
-    background-color: black;
     border-radius: 50%;
-    height: 45px;
-    width: 45px;
+    height: 100px;
+    width: 100px;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,16 +31,14 @@
 
 .sectionTitle {
   @include main-section-title;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 64px;
-  padding: 0 10px;
-  flex: 1 1;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  min-height: 55px;
+  padding-bottom: 20;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     height: auto;
-    min-width: 400px;
   }
 }
 
@@ -49,9 +46,8 @@
   @include layout-container(0);
   width: 100%;
   padding-bottom: 0;
-  margin: 20px 0 0;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
   position: relative;
@@ -61,13 +57,6 @@
     padding: 20px 40px 20px 40px;
     padding-bottom: 20px;
   }
-}
-
-.titleContainerHeading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10px;
 }
 
 .handWaveOutline {
@@ -80,8 +69,17 @@
   }
 }
 
+.titleContainerTop {
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: var(--background-color);
+}
+
 .titleContainerBottom {
-  height: 30px;
+  height: 60px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -99,10 +97,21 @@
   display: inline-block;
   width: 100%;
   text-align: left;
-  min-height: 132px;
+  min-height: 36px;
   font-size: 22px;
+  white-space: nowrap;
+}
 
-  @media screen and (min-width: $media-breakpoint-medium) {
-    min-height: 70px;
-  }
+.skillsContainer {
+  display: flex;
+}
+
+.titleContainerSkills {
+  color: var(--secondary-accent-color);
+  border-bottom: 2px solid var(--secondary-accent-color);
+  display: inline-block;
+  white-space: nowrap;
+  min-height: auto;
+  margin-left: 10px;
+  font-weight: 600;
 }
