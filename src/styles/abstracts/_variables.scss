@@ -13,7 +13,7 @@ $primary-color-light: $light-cyan;
 $primary-color-dark: $deep-night;
 $background-color-light: $white;
 $background-color-dark: $midnight-void;
-$section-background-light: $blue-grey;
+$section-background-light: $white;
 $section-background-dark: $deep-night;
 $text-color-light: $black;
 $text-color-dark: $white;
@@ -27,6 +27,7 @@ $text-color-dark: $white;
   --input-background-color: #{$white};
   --input-border-color: #{$grey};
   --input-placeholder-color: #{$accessible-grey};
+  --border-color: #{$black};
 }
 
 .darkMode {
@@ -37,6 +38,7 @@ $text-color-dark: $white;
   --input-background-color: #{$midnight-void};
   --input-border-color: #{$dark-blue};
   --input-placeholder-color: #{$light-cyan};
+  --border-color: #{$white};
 }
 
 $common-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);

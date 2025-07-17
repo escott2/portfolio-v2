@@ -21,8 +21,7 @@
   justify-content: space-between;
   flex: 1;
   background-color: var(--background-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 10px;
+  border: 1px solid var(--border-color);
 
   @media screen and (min-width: $media-breakpoint-large) {
     flex-direction: row;

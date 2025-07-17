@@ -36,7 +36,7 @@ function Home({ hasScrolledDown }: HomeProps) {
       <main className={styles.homeContainer}>
         <Element name="landing">
           <TitleContainer />
-          <div className={styles.introSectionContainer}>
+          {/* <div className={styles.introSectionContainer}>
             <div className={styles.introSectionContainerInner}>
               <div className={styles.introContent}>
                 <div className={styles.introText}>
@@ -87,7 +87,7 @@ function Home({ hasScrolledDown }: HomeProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </Element>
         <div>
           <Projects />
