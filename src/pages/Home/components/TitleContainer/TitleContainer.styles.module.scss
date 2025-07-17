@@ -5,6 +5,7 @@
   padding: 100px 0 100px;
   position: relative;
   display: flex;
+  overflow: hidden;
   @media (pointer: fine) {
     cursor: none;
   }
@@ -17,6 +18,10 @@
     display: block;
     height: 100px;
     width: 100px;
+    background-color: #c8e1ea;
+
+    border-radius: 50%;
+    box-shadow: $common-box-shadow;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,7 +38,7 @@
   width: 100%;
   text-align: left;
   min-height: 55px;
-  padding-bottom: 20;
+  padding-bottom: 20px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     height: auto;
@@ -41,7 +46,7 @@
 }
 
 .titleContainerContent {
-  @include layout-container(0);
+  max-width: 700px;
   width: 100%;
   padding-bottom: 0;
   display: inline-flex;
@@ -49,12 +54,8 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  padding: 20px;
-
-  @media screen and (min-width: $media-breakpoint-large) {
-    padding: 20px 40px 20px 40px;
-    padding-bottom: 20px;
-  }
+  flex: 1 1 auto;
+  padding: 50px;
 }
 
 .handWaveOutline {
@@ -95,7 +96,7 @@
   display: inline-block;
   width: 100%;
   text-align: left;
-  min-height: 36px;
+  min-height: 38px;
   font-size: 18px;
 
   @media screen and (min-width: $media-breakpoint-small) {
@@ -111,10 +112,63 @@
 
 .titleContainerSkills {
   color: var(--secondary-accent-color);
-  border-bottom: 2px solid var(--secondary-accent-color);
+  border-bottom: 4px solid #0091cf;
   display: inline-block;
   white-space: nowrap;
   min-height: auto;
   margin-left: 10px;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+.introContainer {
+  @include layout-container(0);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+}
+
+.puzzleDividerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.puzzlePiece {
+  height: auto;
+  width: 60px;
+  padding: 10px;
+  transform: rotate(90deg);
+  fill: #0070bb;
+}
+
+.profileImgContainer {
+  background-color: #622700;
+  position: relative;
+  max-width: 250px;
+  height: 200px;
+  width: 100%;
+}
+
+.profileImg {
+  height: 200px;
+  width: auto;
+  cursor: none;
+  border: 5px solid #0091cf;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  display: block;
+  padding: 10px 10px 0 10px;
+  transform: rotate(5deg);
 }
