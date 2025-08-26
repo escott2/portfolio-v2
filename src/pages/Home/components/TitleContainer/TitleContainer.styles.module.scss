@@ -2,7 +2,7 @@
 
 .titleContainer {
   background-color: var(--primary-color);
-  padding: 100px 0 100px;
+  padding: 140px 0 260px;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -18,10 +18,9 @@
     display: block;
     height: 100px;
     width: 100px;
-    background-color: #c8e1ea;
+    background-color: var(--cursor-background-color);
 
     border-radius: 50%;
-    box-shadow: $common-box-shadow;
     position: fixed;
     top: 0;
     left: 0;
@@ -59,12 +58,13 @@
 }
 
 .titleContainerTop {
-  height: 60px;
+  height: 100px;
   width: 100%;
   position: absolute;
   top: 0;
   z-index: 1;
-  background-color: var(--background-color);
+  background-color: var(--canvas-background-color);
+  border-bottom: 2px solid #0388a6;
 }
 
 .titleContainerBottom {
@@ -73,7 +73,8 @@
   position: absolute;
   bottom: -60px;
   z-index: 1;
-  background-color: var(--background-color);
+  background-color: var(--canvas-background-color);
+  border-top: 2px solid #0388a6;
 }
 
 .titleContainerInfo {
@@ -122,7 +123,7 @@
 }
 
 .profileImgContainer {
-  background-color: #0091cf;
+  background-color: #0388a6;
   position: relative;
   max-width: 250px;
   height: 200px;
@@ -134,7 +135,8 @@
   height: 200px;
   width: auto;
   cursor: none;
-  border: 5px solid var(--border-color);
+  border: 2px solid var(--border-color);
+
   z-index: 2;
   position: absolute;
   top: 0;
