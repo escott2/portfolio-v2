@@ -9,22 +9,15 @@
 }
 
 @mixin main-section-container {
-  @include layout-container(30px 10px);
-  & {
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: $media-breakpoint-medium) {
-    margin-bottom: 40px;
-    padding: 30px;
-  }
+  background: var(--section-background);
+  margin-bottom: 0;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 40px;
 }
 
 @mixin main-section-content {
-  background-color: $white;
-  border-radius: 10px;
-  box-shadow: $common-box-shadow;
-  background-color: var(--section-background);
+  @include layout-container(30px 10px);
 }
 
 @mixin subsection {

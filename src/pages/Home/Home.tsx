@@ -1,8 +1,7 @@
 import styles from "./Home.module.scss";
 import { About, Projects, Contact } from "../../features";
-import laptopImg from "../../assets/laptop.jpg";
 import { useEffect } from "react";
-import { Link, animateScroll as scroll, Element } from "react-scroll";
+import { animateScroll as scroll, Element } from "react-scroll";
 import { IconButton } from "../../components/ui/Button";
 import { useAnimate, motion, AnimatePresence } from "framer-motion";
 import { TitleContainer } from "./components";
@@ -36,7 +35,7 @@ function Home({ hasScrolledDown }: HomeProps) {
       <main className={styles.homeContainer}>
         <Element name="landing">
           <TitleContainer />
-          <div className={styles.introSectionContainer}>
+          {/* <div className={styles.introSectionContainer}>
             <div className={styles.introSectionContainerInner}>
               <div className={styles.introContent}>
                 <div className={styles.introText}>
@@ -87,7 +86,7 @@ function Home({ hasScrolledDown }: HomeProps) {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </Element>
         <div>
           <Projects />

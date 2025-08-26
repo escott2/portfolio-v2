@@ -2,10 +2,10 @@
 
 .titleContainer {
   background-color: var(--primary-color);
-  padding: 20px 0 50px;
+  padding: 140px 0 260px;
   position: relative;
   display: flex;
-  justify-content: center;
+  overflow: hidden;
   @media (pointer: fine) {
     cursor: none;
   }
@@ -16,10 +16,11 @@
 
   @media (pointer: fine) {
     display: block;
-    background-color: black;
+    height: 100px;
+    width: 100px;
+    background-color: var(--cursor-background-color);
+
     border-radius: 50%;
-    height: 45px;
-    width: 45px;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,56 +33,114 @@
 
 .sectionTitle {
   @include main-section-title;
-  min-height: 64px;
-  display: flex;
-  align-items: center;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  min-height: 55px;
+  padding-bottom: 20px;
 
-  & {
-    padding: 0 20px;
-  }
-
-  @media screen and (min-width: $media-breakpoint-large) {
+  @media screen and (min-width: $media-breakpoint-medium) {
     height: auto;
   }
 }
 
 .titleContainerContent {
-  @include layout-container(0);
+  max-width: 700px;
+  width: 100%;
   padding-bottom: 0;
-  margin: 20px 0 0;
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   position: relative;
-
-  @media screen and (min-width: $media-breakpoint-large) {
-    flex-direction: row;
-    padding-bottom: 20px;
-  }
+  flex: 1 1 auto;
+  padding: 50px;
 }
 
-.handWaveOutline {
-  height: 40px;
-  width: 40px;
-  margin-top: 20px;
-
-  @media screen and (min-width: $media-breakpoint-large) {
-    margin: 0;
-  }
+.titleContainerTop {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: var(--canvas-background-color);
+  border-bottom: 2px solid #0388a6;
 }
 
 .titleContainerBottom {
-  height: 30px;
+  height: 120px;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -60px;
   z-index: 1;
-  background-color: var(--background-color);
+  background-color: var(--canvas-background-color);
+  border-top: 2px solid #0388a6;
 }
 
-.smiley {
-  height: 45px;
+.titleContainerInfo {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  min-height: 43px;
+  font-size: 18px;
+
+  @media screen and (min-width: $media-breakpoint-small) {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+}
+
+.skillsContainer {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  .titleContainerInfo {
+    padding: 5px 10px 5px 0;
+  }
+
+  .titleContainerSkills {
+    background-color: #0091cf;
+    display: inline-block;
+    font-weight: 700;
+    padding-left: 10px;
+  }
+}
+
+.introContainer {
+  @include layout-container(0);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (min-width: $media-breakpoint-large) {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+}
+
+.profileImgContainer {
+  background-color: #0388a6;
+  position: relative;
+  max-width: 250px;
+  height: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profileImg {
+  height: 200px;
   width: auto;
-  margin: 5px 0;
+  cursor: none;
+  border: 2px solid var(--border-color);
+
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  display: block;
+  padding: 10px 10px 0 10px;
+  transform: rotate(5deg);
 }

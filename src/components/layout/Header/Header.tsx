@@ -1,7 +1,6 @@
 import styles from "./Header.module.scss";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import profilePic from "../../../assets/profile-mask-blue.png";
 import { Link, Button } from "react-scroll";
 import { ThemeContext } from "../../../store/theme-context";
 import { useContext } from "react";
@@ -24,7 +23,6 @@ function Header({ hasScrolledDown }: HeaderProps) {
       <div className={styles.headerInner}>
         <div className={styles.titleImageContainer}>
           <h1 className={styles.pageTitle}>Emily Scott</h1>
-          <img src={profilePic} className={styles.profileImg} />
         </div>
 
         <Button

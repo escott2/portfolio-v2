@@ -2,9 +2,10 @@
 
 .linkContainer {
   width: 100%;
-  max-width: 400px;
+  max-width: 550px;
+  height: auto;
   padding: 20px;
-  height: 400px;
+  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;

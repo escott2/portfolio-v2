@@ -1,5 +1,6 @@
 $blue-grey: #f6fafb;
 $light-cyan: #c8e1ea;
+$teal: #0388a6;
 $dark-blue: #223945;
 $deep-night: #111c22;
 $midnight-void: #0a1114;
@@ -10,32 +11,40 @@ $black: #000;
 
 $accent-color: $dark-blue;
 $primary-color-light: $light-cyan;
-$primary-color-dark: $deep-night;
+$primary-color-dark: $midnight-void;
 $background-color-light: $white;
-$background-color-dark: $midnight-void;
-$section-background-light: $blue-grey;
-$section-background-dark: $deep-night;
+$background-color-dark: $black;
+$section-background-light: $white;
+$section-background-dark: $midnight-void;
 $text-color-light: $black;
 $text-color-dark: $white;
+$cursor-background-color-light: $light-cyan;
+$cursor-background-color-dark: #fff;
 
 :root {
   --primary-color: #{$primary-color-light};
+  --canvas-background-color: #{$white};
   --background-color: #{$background-color-light};
   --section-background: #{$section-background-light};
   --text-color: #{$text-color-light};
   --input-background-color: #{$white};
   --input-border-color: #{$grey};
   --input-placeholder-color: #{$accessible-grey};
+  --border-color: #{$black};
+  --cursor-background-color: #{$cursor-background-color-light};
 }
 
 .darkMode {
   --primary-color: #{$primary-color-dark};
+  --canvas-background-color: #{$midnight-void};
   --background-color: #{$background-color-dark};
   --section-background: #{$section-background-dark};
   --text-color: #{$text-color-dark};
   --input-background-color: #{$midnight-void};
   --input-border-color: #{$dark-blue};
   --input-placeholder-color: #{$light-cyan};
+  --border-color: #{$white};
+  --cursor-background-color: #{$cursor-background-color-dark};
 }
 
 $common-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
