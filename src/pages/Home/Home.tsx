@@ -1,8 +1,7 @@
 import styles from "./Home.module.scss";
 import { About, Projects, Contact } from "../../features";
-import laptopImg from "../../assets/laptop.jpg";
 import { useEffect } from "react";
-import { Link, animateScroll as scroll, Element } from "react-scroll";
+import { animateScroll as scroll, Element } from "react-scroll";
 import { IconButton } from "../../components/ui/Button";
 import { useAnimate, motion, AnimatePresence } from "framer-motion";
 import { TitleContainer } from "./components";
