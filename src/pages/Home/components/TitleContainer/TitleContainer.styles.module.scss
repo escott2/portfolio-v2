@@ -16,10 +16,10 @@
 
   @media (pointer: fine) {
     display: block;
-    height: 100px;
-    width: 100px;
-    background-color: var(--cursor-background-color);
-
+    height: 75px;
+    width: 75px;
+    border: 4px dotted orangered;
+    padding: 5px;
     border-radius: 50%;
     position: fixed;
     top: 0;
@@ -35,12 +35,12 @@
   @include main-section-title;
   display: inline-block;
   width: 100%;
-  text-align: left;
   min-height: 55px;
   padding-bottom: 20px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     height: auto;
+    text-align: left;
   }
 }
 
@@ -49,45 +49,61 @@
   width: 100%;
   padding-bottom: 0;
   display: inline-flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   position: relative;
   flex: 1 1 auto;
-  padding: 50px;
+  padding: 20px 20px 50px 20px;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    align-items: flex-start;
+    padding: 50px;
+  }
+}
+
+.titleContainerTop,
+.titleContainerBottom {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--canvas-background-color);
+  opacity: 0.95;
 }
 
 .titleContainerTop {
-  height: 100px;
-  width: 100%;
-  position: absolute;
+  height: 120px;
   top: 0;
-  z-index: 1;
-  background-color: var(--canvas-background-color);
   border-bottom: 2px solid #0388a6;
 }
 
 .titleContainerBottom {
-  height: 120px;
-  width: 100%;
-  position: absolute;
+  height: 150px;
   bottom: -60px;
-  z-index: 1;
-  background-color: var(--canvas-background-color);
   border-top: 2px solid #0388a6;
 }
 
 .titleContainerInfo {
   display: inline-block;
   width: 100%;
-  text-align: left;
   min-height: 43px;
-  font-size: 18px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  @media screen and (min-width: $media-breakpoint-small) {
-    font-size: 22px;
+  @media screen and (min-width: $media-breakpoint-medium) {
     white-space: nowrap;
+    font-size: 22px;
+    justify-content: flex-start;
   }
+}
+
+.titleContainerEmphasis {
+  background-color: #69e1fc;
+  color: $black;
+  max-width: fit-content;
+  padding: 0 10px;
 }
 
 .skillsContainer {
@@ -98,49 +114,40 @@
   .titleContainerInfo {
     padding: 5px 10px 5px 0;
   }
-
-  .titleContainerSkills {
-    background-color: #0091cf;
-    display: inline-block;
-    font-weight: 700;
-    padding-left: 10px;
-  }
 }
 
 .introContainer {
   @include layout-container(0);
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   width: 100%;
 
-  @media screen and (min-width: $media-breakpoint-large) {
-    padding: 20px;
-    padding-bottom: 0;
+  @media screen and (min-width: $media-breakpoint-medium) {
+    flex-direction: row;
   }
 }
 
 .profileImgContainer {
   background-color: #0388a6;
   position: relative;
-  max-width: 250px;
-  height: 200px;
+  height: 150px;
   width: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .profileImg {
-  height: 200px;
+  height: 210px;
   width: auto;
   cursor: none;
   border: 2px solid var(--border-color);
-
+  border-color: #034554;
   z-index: 2;
   position: absolute;
-  top: 0;
+  top: 10px;
+  left: 50%;
   display: block;
   padding: 10px 10px 0 10px;
-  transform: rotate(5deg);
+  transform: translateX(-50%);
 }
