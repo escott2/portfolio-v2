@@ -13,13 +13,12 @@ function OverviewSection() {
         className={styles.overviewImg}
       />
       <p className={styles.overviewText}>
-        I’m an experienced front-end engineer with Bachelor’s degrees in
-        Computer Information Systems and Psychology. I enjoy blending
-        human-centered thinking with technical expertise to create intuitive,
-        impactful products in collaboration with cross-functional teams. I value
-        the entire development process, from ideation to launch, and
-        continuously adapt and learn as I take on new challenges with a growth
-        mindset.
+        I’m an experienced software engineer with Bachelor’s degrees in Computer
+        Information Systems and Psychology. I enjoy blending human-centered
+        thinking with technical expertise to create intuitive, impactful
+        products in collaboration with cross-functional teams. I value the
+        entire development process, from ideation to launch, and continuously
+        adapt and learn as I take on new challenges with a growth mindset.
       </p>
     </section>
   );
