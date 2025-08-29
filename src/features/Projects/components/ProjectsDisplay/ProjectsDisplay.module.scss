@@ -2,12 +2,13 @@
 
 .projectsDisplayContainer {
   padding-bottom: 60px;
+  border-left: 1px solid $teal;
 }
 
 .projectTitle {
   @include heading-3;
   text-align: center;
-  margin: 20px;
+  margin: 0 20px;
 
   @media screen and (min-width: $media-breakpoint-large) {
     text-align: left;

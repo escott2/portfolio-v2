@@ -18,6 +18,10 @@
 
 @mixin main-section-content {
   @include layout-container(30px 10px);
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 30px 50px;
+  }
 }
 
 @mixin subsection {
@@ -92,7 +96,7 @@
 
   &:hover {
     cursor: pointer;
-    border-bottom: 4px solid $light-cyan;
+    border-bottom: 4px solid $bright-teal;
   }
 }
 
@@ -109,11 +113,13 @@
 
   @media screen and (min-width: $media-breakpoint-medium) {
     font-size: $main-section-title-font-size;
+    text-align: left;
   }
 }
 
 @mixin heading-3 {
   font-size: 24px;
+  font-weight: 400;
   text-align: left;
   padding: 10px 0;
 }
