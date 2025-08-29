@@ -2,7 +2,8 @@
 
 .titleContainer {
   background-color: var(--primary-color);
-  padding: 140px 0 260px;
+  border-top: 1px solid $teal;
+  border-bottom: 1px solid $teal;
   position: relative;
   display: flex;
   overflow: hidden;
@@ -16,9 +17,8 @@
 
   @media (pointer: fine) {
     display: block;
-    height: 75px;
-    width: 75px;
-    border: 4px dotted orangered;
+    height: 200px;
+    width: 200px;
     padding: 5px;
     border-radius: 50%;
     position: fixed;
@@ -29,6 +29,12 @@
     will-change: transform;
     mix-blend-mode: difference;
   }
+}
+
+.cursorInternetSVG {
+  width: 100%;
+  height: 100%;
+  transform: rotate(160deg);
 }
 
 .sectionTitle {
@@ -54,33 +60,12 @@
   flex-direction: column;
   position: relative;
   flex: 1 1 auto;
-  padding: 20px 20px 50px 20px;
+  padding: 50px 20px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     align-items: flex-start;
-    padding: 50px;
+    padding: 80px 50px;
   }
-}
-
-.titleContainerTop,
-.titleContainerBottom {
-  width: 100%;
-  position: absolute;
-  z-index: 1;
-  background-color: var(--canvas-background-color);
-  opacity: 0.95;
-}
-
-.titleContainerTop {
-  height: 120px;
-  top: 0;
-  border-bottom: 2px solid #0388a6;
-}
-
-.titleContainerBottom {
-  height: 150px;
-  bottom: -60px;
-  border-top: 2px solid #0388a6;
 }
 
 .titleContainerInfo {
@@ -88,22 +73,22 @@
   width: 100%;
   min-height: 43px;
   font-size: 20px;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 
   @media screen and (min-width: $media-breakpoint-medium) {
     white-space: nowrap;
-    font-size: 22px;
     justify-content: flex-start;
+    text-align: left;
   }
 }
 
 .titleContainerEmphasis {
-  background-color: #69e1fc;
+  background-color: $bright-teal;
   color: $black;
   max-width: fit-content;
-  padding: 0 10px;
 }
 
 .skillsContainer {
@@ -130,24 +115,28 @@
 }
 
 .profileImgContainer {
-  background-color: #0388a6;
+  background-color: $teal;
   position: relative;
-  height: 150px;
+  height: 210px;
   width: 100%;
-  margin: 50px auto;
+  margin: 0 auto;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    max-width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+  }
 }
 
 .profileImg {
   height: 210px;
   width: auto;
   cursor: none;
-  border: 2px solid var(--border-color);
-  border-color: #034554;
   z-index: 2;
   position: absolute;
-  top: 10px;
-  left: 50%;
   display: block;
   padding: 10px 10px 0 10px;
+  left: 50%;
   transform: translateX(-50%);
+  bottom: 0;
 }

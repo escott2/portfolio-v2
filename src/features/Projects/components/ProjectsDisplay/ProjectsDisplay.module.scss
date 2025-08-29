@@ -1,13 +1,14 @@
 @use "../../../../styles/abstracts/" as *;
 
 .projectsDisplayContainer {
-  padding-bottom: 60px;
+  @include section-info-container;
 }
 
 .projectTitle {
   @include heading-3;
+  padding: 20px 0 0;
   text-align: center;
-  margin: 20px;
+  margin: 0 20px;
 
   @media screen and (min-width: $media-breakpoint-large) {
     text-align: left;
@@ -27,10 +28,11 @@
 
 .projectInfo {
   padding: 0 20px 20px;
+
   flex: 1;
   font-size: 18px;
 
-  @media screen and (min-width: $media-breakpoint-large) {
-    padding: 40px;
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 0 40px;
   }
 }

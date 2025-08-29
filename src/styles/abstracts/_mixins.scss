@@ -17,14 +17,48 @@
 }
 
 @mixin main-section-content {
-  @include layout-container(30px 10px);
+  @include layout-container(30px 0);
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 30px 50px;
+  }
+}
+
+@mixin section-info-container {
+  padding: 20px 0;
+  border-left: 1px solid $teal;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $bright-teal;
+    border-radius: 2px;
+    left: -10px;
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 20px 20px;
+    margin-left: 15px;
+  }
 }
 
 @mixin subsection {
-  padding: 10px;
+  padding: 20px;
 
   @media screen and (min-width: $media-breakpoint-medium) {
-    padding: 0 30px 30px 30px;
+    padding: 0 40px 40px 40px;
   }
 }
 
@@ -92,7 +126,7 @@
 
   &:hover {
     cursor: pointer;
-    border-bottom: 4px solid $light-cyan;
+    border-bottom: 4px solid $bright-teal;
   }
 }
 
@@ -109,11 +143,13 @@
 
   @media screen and (min-width: $media-breakpoint-medium) {
     font-size: $main-section-title-font-size;
+    text-align: left;
   }
 }
 
 @mixin heading-3 {
   font-size: 24px;
+  font-weight: 400;
   text-align: left;
   padding: 10px 0;
 }
