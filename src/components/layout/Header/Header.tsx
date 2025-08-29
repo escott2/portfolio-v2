@@ -44,7 +44,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
               to="projects"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={-75}
               duration={0}
               className={styles.link}
               onSetActive={() => handleTabClick("Projects")}
@@ -60,7 +60,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
               to="about"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={-75}
               duration={0}
               className={styles.link}
               onSetActive={() => handleTabClick("About")}
@@ -76,7 +76,7 @@ function Header({ hasScrolledDown }: HeaderProps) {
               to="contact"
               spy={true}
               smooth={true}
-              offset={-150}
+              offset={-75}
               duration={0}
               className={styles.link}
               onSetActive={() => handleTabClick("Contact")}

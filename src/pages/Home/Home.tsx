@@ -35,58 +35,6 @@ function Home({ hasScrolledDown }: HomeProps) {
       <main className={styles.homeContainer}>
         <Element name="landing">
           <TitleContainer />
-          {/* <div className={styles.introSectionContainer}>
-            <div className={styles.introSectionContainerInner}>
-              <div className={styles.introContent}>
-                <div className={styles.introText}>
-                  <p>
-                    I build responsive, user-friendly, and
-                    thoughtfully-engineered websites. Explore{" "}
-                    <Link
-                      to="projects"
-                      spy={true}
-                      smooth={true}
-                      offset={-150}
-                      duration={0}
-                      className={styles.link}
-                    >
-                      my featured projects
-                    </Link>
-                    , learn more{" "}
-                    <Link
-                      to="about"
-                      spy={true}
-                      smooth={true}
-                      offset={-150}
-                      duration={0}
-                      className={styles.link}
-                    >
-                      about me
-                    </Link>
-                    , and{" "}
-                    <Link
-                      to="contact"
-                      spy={true}
-                      smooth={true}
-                      offset={-150}
-                      duration={0}
-                      className={styles.link}
-                    >
-                      reach out
-                    </Link>{" "}
-                    if you're interested in working together!
-                  </p>
-                </div>
-                <div className={styles.introImgContainer}>
-                  <img
-                    src={laptopImg}
-                    className={styles.introImg}
-                    alt="computer on concrete cube"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
         </Element>
         <div>
           <Projects />

@@ -5,11 +5,7 @@
 }
 
 .contactInfo {
-  padding: $main-section-info-padding;
-
-  @media screen and (min-width: $media-breakpoint-medium) {
-    padding: $main-section-info-padding-desktop;
-  }
+  @include section-info-container;
 
   h3 {
     @include heading-3;

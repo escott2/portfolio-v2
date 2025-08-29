@@ -1,8 +1,7 @@
 @use "../../../../styles/abstracts/" as *;
 
 .projectsDisplayContainer {
-  padding-bottom: 60px;
-  border-left: 1px solid $teal;
+  @include section-info-container;
 }
 
 .projectTitle {
@@ -28,10 +27,11 @@
 
 .projectInfo {
   padding: 0 20px 20px;
+
   flex: 1;
   font-size: 18px;
 
-  @media screen and (min-width: $media-breakpoint-large) {
+  @media screen and (min-width: $media-breakpoint-medium) {
     padding: 40px;
   }
 }

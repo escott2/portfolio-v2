@@ -77,11 +77,7 @@ function TitleContainer() {
               />
             </h2>
             <TypeAnimation
-              sequence={[
-                "",
-                2300,
-                "I build beautiful, user-friendly websites.",
-              ]}
+              sequence={["", 2300, "I build intuitive, impactful websites."]}
               wrapper="span"
               speed={70}
               cursor={false}

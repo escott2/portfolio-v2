@@ -17,18 +17,48 @@
 }
 
 @mixin main-section-content {
-  @include layout-container(30px 10px);
-
+  @include layout-container(30px 0);
   @media screen and (min-width: $media-breakpoint-medium) {
     padding: 30px 50px;
   }
 }
 
-@mixin subsection {
-  padding: 10px;
+@mixin section-info-container {
+  padding: 20px 0;
+  border-left: 1px solid $teal;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $bright-teal;
+    border-radius: 2px;
+    left: -10px;
+    position: absolute;
+  }
+
+  &::before {
+    top: 0;
+  }
+
+  &::after {
+    bottom: 0;
+  }
 
   @media screen and (min-width: $media-breakpoint-medium) {
-    padding: 0 30px 30px 30px;
+    padding: 20px 20px;
+    margin-left: 15px;
+  }
+}
+
+@mixin subsection {
+  padding: 20px;
+
+  @media screen and (min-width: $media-breakpoint-medium) {
+    padding: 0 40px 40px 40px;
   }
 }
 
